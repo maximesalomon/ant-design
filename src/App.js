@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import { Switch } from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Ant Design Components with React</h1>
-      </header>
-    </div>
-  );
+function onChange(checked) {
+  console.log(`switch to ${checked}`);
+}
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Switch defaultChecked onChange={onChange} />
+      </div>
+    );
+  }
 }
 
 export default App;
